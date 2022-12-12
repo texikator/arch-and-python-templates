@@ -1,0 +1,69 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <title>{{data.title}}</title>
+  <meta name="description" content="website description" />
+  <meta name="keywords" content="website keywords, website keywords" />
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <link rel="stylesheet" type="text/css" href="http://{{data.HTTP_HOST}}/style.css/" title="style" />
+</head>
+
+<body>
+  <div id="main">
+    <div id="header">
+      <div id="logo">
+        <div id="logo_text">
+          <!-- class="logo_colour", allows you to change the colour of the text -->
+          <h1><a href="index.html">{{logo_1}}<span class="logo_colour">{{logo_2}}</span></a></h1>
+          <h2>{{logo_3}}</h2>
+        </div>
+      </div>
+      <div id="menubar">
+        <ul id="menu">
+          {# {% for uri, caption in data.menu.items() %} #}
+          <!-- put class="selected" in the li tag for the selected page - to highlight which page you're on -->
+<!--          <li><a href="{{uri}}">{{caption}}</a></li>  &lt;!&ndash; <li class="selected"> &ndash;&gt;-->
+              <li><a href="/">В начало</a></li>
+              <li><a href="/about/">О компании</a></li>
+              <li><a href="/contacts/">Контакты</a></li>
+         {# {% endfor %} #}
+        </ul>
+      </div>
+    </div>
+    <div id="site_content">
+      <div class="sidebar">
+        <!-- insert your sidebar items here -->
+        {% for item in news %}
+          <h3>{{item.header}}</h3>
+
+          <h5>{{item.data}}</h5>
+          <p>{{item.short_text}}<br /><a href="#">Read more</a></p>
+          <p></p>
+
+        {% endfor %}
+<!--        <h3>Useful Links</h3>-->
+<!--        <ul>-->
+<!--          <li><a href="#">link 1</a></li>-->
+<!--          <li><a href="#">link 2</a></li>-->
+<!--          <li><a href="#">link 3</a></li>-->
+<!--          <li><a href="#">link 4</a></li>-->
+<!--        </ul>-->
+<!--        <h3>Search</h3>-->
+<!--        <form method="post" action="#" id="search_form">-->
+<!--          <p>-->
+<!--            <input class="search" type="text" name="search_field" value="Enter keywords....." />-->
+<!--            <input name="search" type="image" style="border: 0; margin: 0 0 -9px 5px;" src="style/search.png" alt="Search" title="Search" />-->
+<!--          </p>-->
+<!--        </form>-->
+      </div>
+      <div id="content">
+          {{data.content}}
+      </div>
+    </div>
+    <div id="footer">
+      footer
+    </div>
+  </div>
+</body>
+</html>
