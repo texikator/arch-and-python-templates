@@ -19,6 +19,7 @@ class Index:
 
         return "200 OK", render(template, data=data)
 
+    
 class About:
     def __call__(self, request):
         data = {}
