@@ -8,12 +8,6 @@ CSS_FILE = 'style.css'
 template = join(TEMPLATE_DIR, TEMPLATE_NAME, TEMPLATE_FILE)
 css = join(TEMPLATE_DIR, TEMPLATE_NAME, CSS_FILE)
 
-# class Base():
-#     def __init__(self):
-#         self.data = {}
-#
-#         self.data['menu_items'] = {'about/': 'About', 'contacts/': 'Contacts', 'features/': 'Features'}
-
 
 class Index:
 
