@@ -3,6 +3,7 @@
 
 <head>
   <title>{{data.title}}</title>
+  <link rel="icon" href="data:;base64,=">
   <meta name="description" content="website description" />
   <meta name="keywords" content="website keywords, website keywords" />
   <meta http-equiv="content-type" content="text/html; charset=utf-8" />
@@ -56,6 +57,27 @@
 <!--            <input name="search" type="image" style="border: 0; margin: 0 0 -9px 5px;" src="style/search.png" alt="Search" title="Search" />-->
 <!--          </p>-->
 <!--        </form>-->
+
+        <form action="" method="post">
+			<fieldset>
+				<legend>Зарегистрируйтесь</legend>
+				<p><label class="title" for="name">Ваше имя:</label>
+					 <input type="text" name="name" id="name"><br />
+					 <label class="title" for="email">Ваш email:</label>
+					 <input type="text" name="email" id="email"></p>
+				<p><label for="location" class="title">Ближайший центр:</label>
+					 <select name="location" id="location">
+						 <option value="ny">Москва</option>
+						 <option value="il">Санкт-Петербург</option>
+						 <option value="ca">Екатеринбург</option>
+					 </select></p>
+				<span class="title">Являетесь участником?</span>
+				<label><input type="radio" name="member" value="yes" /> Да</label>
+				<label><input type="radio" name="member" value="no" /> Нет</label></p>
+			</fieldset>
+ 	    <div class="submit"><input type="submit" value="Регистрация" /></div>
+		</form>
+
       </div>
       <div id="content">
           {{data.content}}
